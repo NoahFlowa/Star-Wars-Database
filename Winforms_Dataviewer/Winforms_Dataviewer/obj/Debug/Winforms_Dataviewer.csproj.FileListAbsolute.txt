@@ -1,0 +1,13 @@
+C:\Users\NoahFlowa\OneDrive\NMC\CIT 255\Data Viewer\Winforms_Dataviewer\Winforms_Dataviewer\obj\Debug\Winforms_Dataviewer.csprojAssemblyReference.cache
+C:\Users\NoahFlowa\OneDrive\NMC\CIT 255\Data Viewer\Winforms_Dataviewer\Winforms_Dataviewer\obj\Debug\Winforms_Dataviewer.Properties.Resources.resources
+C:\Users\NoahFlowa\OneDrive\NMC\CIT 255\Data Viewer\Winforms_Dataviewer\Winforms_Dataviewer\obj\Debug\Winforms_Dataviewer.csproj.GenerateResource.cache
+C:\Users\NoahFlowa\OneDrive\NMC\CIT 255\Data Viewer\Winforms_Dataviewer\Winforms_Dataviewer\obj\Debug\Winforms_Dataviewer.csproj.CoreCompileInputs.cache
+C:\Users\NoahFlowa\OneDrive\NMC\CIT 255\Data Viewer\Winforms_Dataviewer\Winforms_Dataviewer\bin\Debug\Winforms_Dataviewer.exe.config
+C:\Users\NoahFlowa\OneDrive\NMC\CIT 255\Data Viewer\Winforms_Dataviewer\Winforms_Dataviewer\bin\Debug\Winforms_Dataviewer.exe
+C:\Users\NoahFlowa\OneDrive\NMC\CIT 255\Data Viewer\Winforms_Dataviewer\Winforms_Dataviewer\bin\Debug\Winforms_Dataviewer.pdb
+C:\Users\NoahFlowa\OneDrive\NMC\CIT 255\Data Viewer\Winforms_Dataviewer\Winforms_Dataviewer\obj\Debug\Winforms_Dataviewer.ListForm.resources
+C:\Users\NoahFlowa\OneDrive\NMC\CIT 255\Data Viewer\Winforms_Dataviewer\Winforms_Dataviewer\obj\Debug\Winforms_Dataviewer.exe
+C:\Users\NoahFlowa\OneDrive\NMC\CIT 255\Data Viewer\Winforms_Dataviewer\Winforms_Dataviewer\obj\Debug\Winforms_Dataviewer.pdb
+C:\Users\NoahFlowa\OneDrive\NMC\CIT 255\Data Viewer\Winforms_Dataviewer\Winforms_Dataviewer\obj\Debug\Winforms_Dataviewer.DetailFormPeople.resources
+C:\Users\NoahFlowa\OneDrive\NMC\CIT 255\Data Viewer\Winforms_Dataviewer\Winforms_Dataviewer\obj\Debug\Winforms_Dataviewer.DetailFormPlanets.resources
+C:\Users\NoahFlowa\OneDrive\NMC\CIT 255\Data Viewer\Winforms_Dataviewer\Winforms_Dataviewer\obj\Debug\Winforms_Dataviewer.DetailFormStarfighter.resources
