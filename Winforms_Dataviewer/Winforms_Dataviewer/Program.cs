@@ -16,7 +16,8 @@ namespace Winforms_Dataviewer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ListForm());
+            Application.Run(new SWdb());
+
         }
     }
 }

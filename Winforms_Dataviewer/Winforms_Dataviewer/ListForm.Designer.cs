@@ -1,6 +1,6 @@
 ﻿namespace Winforms_Dataviewer
 {
-    partial class ListForm
+    partial class SWdb
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListForm));
-            this.dataGridView_StarWarsInfo = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SWdb));
+            this.dataGridView_swDB = new System.Windows.Forms.DataGridView();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.moreInfo_btn = new System.Windows.Forms.Button();
             this.help_btn = new System.Windows.Forms.Button();
@@ -38,21 +38,21 @@
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.close_btn = new System.Windows.Forms.Button();
             this.sort_btn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_StarWarsInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_swDB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView_StarWarsInfo
+            // dataGridView_swDB
             // 
-            this.dataGridView_StarWarsInfo.BackgroundColor = System.Drawing.Color.Gray;
-            this.dataGridView_StarWarsInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_StarWarsInfo.GridColor = System.Drawing.Color.DimGray;
-            this.dataGridView_StarWarsInfo.Location = new System.Drawing.Point(80, 120);
-            this.dataGridView_StarWarsInfo.Name = "dataGridView_StarWarsInfo";
-            this.dataGridView_StarWarsInfo.RowTemplate.Height = 28;
-            this.dataGridView_StarWarsInfo.Size = new System.Drawing.Size(891, 450);
-            this.dataGridView_StarWarsInfo.TabIndex = 0;
-            this.dataGridView_StarWarsInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView_swDB.BackgroundColor = System.Drawing.Color.DimGray;
+            this.dataGridView_swDB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_swDB.GridColor = System.Drawing.Color.White;
+            this.dataGridView_swDB.Location = new System.Drawing.Point(80, 120);
+            this.dataGridView_swDB.Name = "dataGridView_swDB";
+            this.dataGridView_swDB.RowTemplate.Height = 28;
+            this.dataGridView_swDB.Size = new System.Drawing.Size(891, 450);
+            this.dataGridView_swDB.TabIndex = 0;
+            this.dataGridView_swDB.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_swDB_CellContentClick);
             // 
             // lbl_Title
             // 
@@ -65,7 +65,7 @@
             this.lbl_Title.Size = new System.Drawing.Size(681, 82);
             this.lbl_Title.TabIndex = 1;
             this.lbl_Title.Text = "Star Wars Database";
-            this.lbl_Title.Click += new System.EventHandler(this.label1_Click);
+            this.lbl_Title.Click += new System.EventHandler(this.help_btn_Click);
             // 
             // moreInfo_btn
             // 
@@ -151,7 +151,7 @@
             this.sort_btn.Text = "Sort";
             this.sort_btn.UseVisualStyleBackColor = false;
             // 
-            // ListForm
+            // SWdb
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -165,10 +165,10 @@
             this.Controls.Add(this.help_btn);
             this.Controls.Add(this.moreInfo_btn);
             this.Controls.Add(this.lbl_Title);
-            this.Controls.Add(this.dataGridView_StarWarsInfo);
-            this.Name = "ListForm";
+            this.Controls.Add(this.dataGridView_swDB);
+            this.Name = "SWdb";
             this.Text = "Star Wars Database";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_StarWarsInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_swDB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -177,7 +177,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView_StarWarsInfo;
+        private System.Windows.Forms.DataGridView dataGridView_swDB;
         private System.Windows.Forms.Label lbl_Title;
         private System.Windows.Forms.Button moreInfo_btn;
         private System.Windows.Forms.Button help_btn;

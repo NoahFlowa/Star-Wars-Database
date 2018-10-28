@@ -14,6 +14,8 @@ namespace Winforms_Dataviewer
 {
     public static class GetJsonFiles
     {
+
+
         /// <summary>
         /// Method gets random number for the end of the request url
         /// </summary>
@@ -36,8 +38,7 @@ namespace Winforms_Dataviewer
 
             StringBuilder sb = new StringBuilder();
             sb.Clear();
-            sb.Append("https://swapi.co/api/people/");
-            sb.Append($"{GetRandNum().ToString()}");
+            sb.Append("https://swapi.co/api/people/1/?format=json");
 
             url = sb.ToString();
 
