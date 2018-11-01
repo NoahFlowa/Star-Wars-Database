@@ -40,13 +40,21 @@ namespace Winforms_Dataviewer
             var bindingList = new BindingList<StarWarsPeople>(starWarsPeoples);
             var source = new BindingSource(bindingList, null);
 
-            DataTable dt = new DataTable();
+        }
 
-            dt.Columns.Add("Name");
-            dt.Columns.Add("Birthday");
-            dt.Columns.Add("Homeworld");
+        public async Task DisplayPlanetFile()
+        {
+            //Task<StarWarsPeople> starWarsPeople = GetJsonFiles.GetPeopleFile();
 
-            dataGridView_swDB.DataSource = dt;
+            StarWarsPlanets starWarsPlanets = await GetJsonFiles.GetPlanetFile();
+
+            List<StarWarsPeople> starWarsPlanets = new List<StarWarsPeople>();
+            starWarsPlanets.Add(starWarsPlanets);
+
+            dataGridView_swDB.DataSource = new BindingList<StarWarsPeople>(starWarsPlanets);
+
+            var bindingList = new BindingList<StarWarsPeople>(starWarsPlanets);
+            var source = new BindingSource(bindingList, null);
 
         }
 
@@ -70,18 +78,7 @@ namespace Winforms_Dataviewer
 
         private void help_btn_Click(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-
-            dt.Columns.Add("Name");
-            dt.Columns.Add("Birthday");
-            dt.Columns.Add("Homeworld");
-
-            dataGridView_swDB.DataSource = dt;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
+            MessageBox.Show("Click on any object in the list to view more about the selected object.");
         }
 
         private void dataGridView_swDB_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -91,6 +88,30 @@ namespace Winforms_Dataviewer
         private void close_btn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void moreInfo_btn_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_swDB.SelectedRows.Count == 1)
+            {
+                if (dataGridView_swDB.GetType() == typeof(StarWarsPeople))
+                {
+                    StarWarsPeople swPeople = new StarWarsPeople();
+                    swPeople = (StarWarsPeople)dataGridView_swDB.CurrentRow.DataBoundItem;
+
+                    DetailFormPlanets detailFormPeople = new DetailFormPlanets(swPeople);
+                    detailFormPeople.ShowDialog();
+                }
+                else if (dataGridView_swDB.GetType() == typeof(StarWarsPlanets))
+                {
+                    StarWarsPlanets swPlanets = new StarWarsPlanets();
+                    swPlanets = (StarWarsPlanets)dataGridView_swDB.CurrentRow.DataBoundItem;
+
+                    DetailFormPlanets detailFormPlanets = new DetailFormPlanets(swPlanets);
+                    detailFormPlanets.ShowDialog();
+                }
+                
+            }
         }
     }
 }

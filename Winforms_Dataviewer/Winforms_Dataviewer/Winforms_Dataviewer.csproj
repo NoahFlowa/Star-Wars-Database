@@ -104,6 +104,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="bin\Debug\Winforms_Dataviewer.exe.config" />
+    <None Include="Data\Data.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -120,7 +121,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
-    <Folder Include="Data\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>

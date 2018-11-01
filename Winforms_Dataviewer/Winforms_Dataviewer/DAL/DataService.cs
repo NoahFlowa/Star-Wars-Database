@@ -44,7 +44,7 @@ namespace Winforms_Dataviewer
 
             StarWarsPeople starWarsPeople = new StarWarsPeople();
 
-            Task<StarWarsPeople> getSWPeople = HttpGetCurrentPerson(url);
+            Task<StarWarsPeople> getSWPeople = HttpGetCurrentPeople(url);
 
             getSWPeople.Wait();
 
@@ -53,12 +53,33 @@ namespace Winforms_Dataviewer
             return starWarsPeople;
         }
 
+        public static async Task<StarWarsPlanets> GetPlanetFile()
+        {
+            string url;
+
+            StringBuilder sb = new StringBuilder();
+            sb.Clear();
+            sb.Append("https://swapi.co/api/people/1/?format=json");
+
+            url = sb.ToString();
+
+            StarWarsPlanets starWarsPlanets = new StarWarsPlanets();
+
+            Task<StarWarsPlanets> getSWPlanets = HttpGetCurrentPlanet(url);
+
+            getSWPlanets.Wait();
+
+            starWarsPlanets = await getSWPlanets;
+
+            return starWarsPlanets;
+        }
+
         /// <summary>
         /// Method requests the Server with the URL and returns the persons file
         /// </summary>
         /// <param name="url"></param>
         /// <returns></returns>
-        public static async Task<StarWarsPeople> HttpGetCurrentPerson(string url)
+        public static async Task<StarWarsPeople> HttpGetCurrentPeople(string url)
         {
             string result = null;
 
@@ -71,6 +92,21 @@ namespace Winforms_Dataviewer
             StarWarsPeople starWarsPeople = JsonConvert.DeserializeObject<StarWarsPeople>(result);
 
             return starWarsPeople;
+        }
+
+        public static async Task<StarWarsPlanets> HttpGetCurrentPlanet(string url)
+        {
+            string result = null;
+
+            using (HttpClient syncClient = new HttpClient())
+            {
+                var response = await syncClient.GetAsync(url);
+                result = await response.Content.ReadAsStringAsync();
+            }
+
+            StarWarsPlanets starWarsPlanets = JsonConvert.DeserializeObject<StarWarsPlanets>(result);
+
+            return starWarsPlanets;
         }
 
 
